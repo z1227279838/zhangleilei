@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.stx.xhb.xbanner.XBanner
+        android:id="@+id/xbanner"
+        android:layout_width="300dp"
+        android:layout_height="164dp"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_height="0dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:text="热销新品"
+            android:background="@mipmap/bitmap"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="#fd7b23"
+            android:layout_height="30dp" />
+        <GridView
+            android:id="@+id/grid_view_rxxp"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="186dp"
+            android:numColumns="3"></GridView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_height="0dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@mipmap/bitmap"
+            android:gravity="center"
+            android:text="魔力时尚"
+            android:textColor="#d043ff"
+            android:textSize="16sp" />
+
+        <ListView
+            android:id="@+id/list_view_mlss"
+            android:layout_width="match_parent"
+            android:layout_height="276dp"></ListView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_height="0dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:text="品质生活"
+            android:background="@mipmap/bitmap"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="#ff3d5d"
+            android:layout_height="30dp" />
+        <GridView
+            android:id="@+id/grid_view_pzsh"
+            android:layout_width="match_parent"
+            android:layout_height="368dp"
+            android:numColumns="2"></GridView>
+    </LinearLayout>
+
+
+</LinearLayout>

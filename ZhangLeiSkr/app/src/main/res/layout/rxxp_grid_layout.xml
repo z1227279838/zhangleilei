@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="105dp"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:gravity="center"
+    android:layout_height="166dp">
+    <ImageView
+        android:id="@+id/rxxp_img"
+        android:src="@mipmap/ic_launcher_round"
+        android:layout_width="85dp"
+        android:layout_height="99dp" />
+    <TextView
+        android:id="@+id/rxxp_title"
+        android:layout_width="wrap_content"
+        android:singleLine="true"
+        android:text="title"
+        android:textSize="12sp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/rxxp_price"
+        android:layout_width="wrap_content"
+        android:text="price"
+        android:textColor="#f00"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>
