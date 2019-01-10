@@ -11,5 +11,7 @@ public class Api {
     //注册
     public static final String REGIST = BASE_URL+"/small/user/v1/register";
 
+    public static final String SHOP_DETAILS = BASE_URL+"/small/commodity/v1/findCommodityDetailsById?commodityId=";
+
 
 }

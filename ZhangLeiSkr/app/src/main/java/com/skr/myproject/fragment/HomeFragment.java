@@ -1,5 +1,6 @@
 package com.skr.myproject.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -7,12 +8,14 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
+import com.skr.myproject.DetailsActivity;
 import com.skr.myproject.R;
 import com.skr.myproject.adapter.MyMlssAdapter;
 import com.skr.myproject.adapter.MyPzshAdapter;
@@ -70,14 +73,50 @@ public class HomeFragment extends Fragment implements IHomeView {
                 if (rxxpList != null){
                     MyRxxpAdapter rxxpAdapter = new MyRxxpAdapter(getActivity(),rxxpList);
                     grid_view_rxxp.setAdapter(rxxpAdapter);
+                    grid_view_rxxp.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                            Intent intent = new Intent(getActivity(),DetailsActivity.class);
+
+                            intent.putExtra("id",rxxpList.get(position).getCommodityId()+"");
+                            //   Toast.makeText(getActivity(), rxxpList.get(position).getCommodityId(), Toast.LENGTH_SHORT).show();
+                            //Log.i("bb", "onItemClick: "+rxxpList.get(position).getCommodityId());
+                            startActivity(intent);
+                        }
+                    });
                 }
                 if (mlssList != null){
                     MyMlssAdapter myMlssAdapter = new MyMlssAdapter(getActivity(),mlssList);
                     list_view_mlss.setAdapter(myMlssAdapter);
+                    list_view_mlss.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                            Intent intent = new Intent(getActivity(),DetailsActivity.class);
+
+                            intent.putExtra("id",mlssList.get(position).getCommodityId()+"");
+                            //   Toast.makeText(getActivity(), rxxpList.get(position).getCommodityId(), Toast.LENGTH_SHORT).show();
+                            //Log.i("bb", "onItemClick: "+rxxpList.get(position).getCommodityId());
+                            startActivity(intent);
+                        }
+                    });
                 }
                 if (pzshList != null){
                     MyPzshAdapter pzshAdapter = new MyPzshAdapter(getActivity(),pzshList);
                     grid_view_pzsh.setAdapter(pzshAdapter);
+                    grid_view_pzsh.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                            Intent intent = new Intent(getActivity(),DetailsActivity.class);
+
+                            intent.putExtra("id",pzshList.get(position).getCommodityId()+"");
+                            //   Toast.makeText(getActivity(), rxxpList.get(position).getCommodityId(), Toast.LENGTH_SHORT).show();
+                            //Log.i("bb", "onItemClick: "+rxxpList.get(position).getCommodityId());
+                            startActivity(intent);
+                        }
+                    });
                 }
 
             }

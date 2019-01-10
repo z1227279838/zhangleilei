@@ -53,6 +53,7 @@
         <meta-data
             android:name="UMENG_APPKEY"
             android:value="5c349eacb465f57fd5001138"/>
+        <activity android:name=".DetailsActivity"></activity>
     </application>
 
 </manifest>
