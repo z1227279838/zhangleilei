@@ -12,6 +12,7 @@ public class Api {
     public static final String REGIST = BASE_URL+"/small/user/v1/register";
 
     public static final String SHOP_DETAILS = BASE_URL+"/small/commodity/v1/findCommodityDetailsById?commodityId=";
+    //圈子
 
-
+    public static final String QUAN_DETAILS = BASE_URL+"/small/circle/v1/findCircleList";
 }

@@ -33,10 +33,10 @@ public class ShowActivity extends AppCompatActivity {
                 .setTabPadding(4,6,10)
                 .setChangeColor(Color.RED,Color.BLACK)
                 .addTabItem("首页",R.drawable.rb1_selector,HomeFragment.class)
-                .addTabItem("分类",R.drawable.rb2_selector,SecondFragment.class)
+                .addTabItem("分类",R.drawable.rb2_selector,MineFragment.class)
                 .addTabItem("觅Me",R.drawable.buy,ShopCarFragment.class)
                 .addTabItem("购物车",R.drawable.rb4_selector,MemuFragment.class)
-                .addTabItem("我的",R.drawable.rb5_selector,MineFragment.class)
+                .addTabItem("我的",R.drawable.rb5_selector,SecondFragment.class)
                 .isShowDivider(false)
                 .setOnTabChangeListener(new BottomTabBar.OnTabChangeListener() {
                     @Override
